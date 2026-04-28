@@ -1,4 +1,4 @@
-const capsules = [
+ const capsules = [
   {
     emoji: "🌧️",
     label: "Open this on a bad day",
@@ -6,9 +6,9 @@ const capsules = [
     color: "blue",
     message: `Hey you.
 
-I know today isn't easy. I can feel it from wherever I am — that quiet heaviness you sometimes carry.
+I know today isn't easy. I can feel it from wherever I am "haha tho inakaa jaba😂😂" that quiet heaviness you sometimes carry.
 
-But listen to me for a second: you are not what your bad days say you are. You are the laughter that fills a room. You are the warmth that makes people feel at home.
+But listen to me for a second: you are not what your bad days say you are. You are the laughter that fills a room😁. You are the warmth that makes people feel at home.
 
 Bad days are liars. They come dressed like forever, but they leave by morning.
 
@@ -16,7 +16,9 @@ I wrote this because I wanted you to have something warm to hold when the world 
 
 You're going to be okay. Actually, more than okay. You're going to be wonderful again soon.
 
-I believe in you, Fransiscah. Even on the days you forget to believe in yourself.`
+I believe in you, Fransiscah. Even on the days you forget to believe in yourself.
+
+📖 "The Lord is close to the brokenhearted and saves those who are crushed in spirit." — Psalm 34:18`
   },
   {
     emoji: "🪞",
@@ -29,13 +31,15 @@ Now read this carefully:
 
 You are enough. Not almost enough. Not enough if you fix a few things. Enough, right now, exactly as you are.
 
-You don't see what I see when I look at you — someone who is brilliant without trying, kind without thinking, and beautiful in a way that has nothing to do with a mirror.
+You don't see what I see when I look at you someone who is brilliant without trying, kind without thinking, and beautiful in a way that has nothing to do with a mirror.
 
 Doubt is just fear wearing a familiar face. It's not the truth.
 
 The truth? You are someone who deserves to take up space, to be heard, to be chosen — and to choose yourself first.
 
-Whatever made you open this today... you're bigger than it. I promise.`
+Whatever made you open this today... you're bigger than it. I promise.
+
+📖 "I praise you because I am fearfully and wonderfully made; your works are wonderful, I know that full well." — Psalm 139:14`
   },
   {
     emoji: "🎂",
@@ -44,9 +48,9 @@ Whatever made you open this today... you're bigger than it. I promise.`
     color: "pink",
     message: `Happy birthday, Fransiscah!! 🎉
 
-On this day, the world got a little brighter — and I mean that genuinely. Because you came into it, and things are just... better with you in them.
+On this day"najua haijafika but ill update it ikifika,i know the date😁, the world got a little brighter — and I mean that genuinely. Because you came into it, and things are just... better with you in them.
 
-I hope today feels like warm sunshine on your skin. I hope someone makes you laugh until your stomach hurts. I hope every small thing feels like a celebration.
+I hope today feels like warm sunshine on your skin. I hope someone makes you laugh until your stomach hurts. I hope every small thing feels like a celebration...the small things,you know..
 
 You deserve a day that loves you back as much as you love everything around you.
 
@@ -71,9 +75,9 @@ That thing you just achieved? It's a reflection of who you actually are. Determi
 
 Please don't minimize this moment. Don't rush past it. Stand in it. Let yourself feel proud.
 
-You earned every bit of this.
+You earned every bit of this.belive me hii siku itakuja,utafungua hii letter na usome hii message,utajua ni kweli😂
 
-Go celebrate. You deserve all the joy today.`
+Go celebrate. You deserve all the joy today.make it a day to remember`
   },
   {
     emoji: "💔",
@@ -82,7 +86,7 @@ Go celebrate. You deserve all the joy today.`
     color: "red",
     message: `I'm so sorry your heart is hurting right now.
 
-Heartache is one of the strangest pains — invisible but so very real. Please don't let anyone tell you to "just get over it." Feelings aren't problems to be solved. They're tides. They rise, and they fall.
+Heartache is one of the strangest pains  invisible but so very real. Please don't let anyone tell you to "just get over it." Feelings aren't problems to be solved. They're tides. They rise, and they fall.
 
 Here's what I know: you have a heart that loves deeply. That's not a weakness. That's one of the most beautiful things about you.
 
@@ -128,7 +132,7 @@ You deserve this happiness. Don't shrink it. Don't question it. Just let yoursel
 
 Here's to more days exactly like this one. 🥂
 
-Keep glowing.`
+Keep glowing❤️`
   },
   {
     emoji: "🌙",
@@ -139,7 +143,7 @@ Keep glowing.`
 
 The world is quiet but your mind is loud. I know. I see you.
 
-Here's something I want you to know at 3am, when everything feels louder and lonelier: you are not alone in this. Not really.
+Here's something I want you to know at 3am,tho unalaga mapema assume its saa sita apo😁, when everything feels louder and lonelier: you are not alone in this. Not really.
 
 Sometimes our minds go to big, scary places at night because that's when there's space for all the things we push aside during the day. It doesn't mean the thoughts are true. It just means you're human.
 
@@ -168,7 +172,9 @@ The version of you on the other side of this? She's going to look back at this e
 
 One more day, Fransiscah. Just one more.
 
-I'm cheering for you with everything I have.`
+I'm cheering for you with everything I have.
+
+📖 "But those who hope in the Lord will renew their strength. They will soar on wings like eagles; they will run and not grow weary, they will walk and not be faint." — Isaiah 40:31`
   },
   {
     emoji: "💫",
