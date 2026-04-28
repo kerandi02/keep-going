@@ -1,0 +1,264 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #FFF8F0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.bg-blobs {
+  position: fixed; inset: 0; z-index: 0;
+  pointer-events: none; overflow: hidden;
+}
+.blob {
+  position: absolute; border-radius: 50%;
+  filter: blur(60px); opacity: 0.35;
+  animation: float 8s ease-in-out infinite;
+}
+.blob1 { width: 320px; height: 320px; background: #FFB7C5; top: -80px; left: -60px; animation-delay: 0s; }
+.blob2 { width: 260px; height: 260px; background: #FFDAB9; top: 40%; right: -80px; animation-delay: 2s; }
+.blob3 { width: 200px; height: 200px; background: #C8F0DC; bottom: 10%; left: 20%; animation-delay: 4s; }
+.blob4 { width: 180px; height: 180px; background: #D4BBFF; top: 60%; left: 5%; animation-delay: 1s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50%       { transform: translateY(-20px) scale(1.05); }
+}
+
+.app {
+  position: relative; z-index: 1;
+  max-width: 480px; margin: 0 auto;
+  padding: 20px 16px 60px;
+}
+
+.header {
+  text-align: center;
+  padding: 40px 20px 30px;
+  animation: fadeDown 0.8s ease;
+}
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.heart-icon {
+  font-size: 38px; display: block; margin-bottom: 10px;
+  animation: heartbeat 2s ease-in-out infinite;
+}
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  25%       { transform: scale(1.2); }
+  50%       { transform: scale(1); }
+  75%       { transform: scale(1.1); }
+}
+
+.header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px; color: #3D2C2C; line-height: 1.3;
+}
+.header h1 span { color: #E05C8A; font-style: italic; }
+
+.header p {
+  font-size: 13px; color: #8C7474;
+  margin-top: 8px; font-weight: 300; letter-spacing: 0.5px;
+}
+
+.from-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: #E05C8A; color: white;
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 1px; text-transform: uppercase;
+  padding: 5px 14px; border-radius: 20px; margin-top: 14px;
+}
+
+.photo-section {
+  text-align: center; margin: 10px 0 24px;
+  animation: fadeUp 0.9s ease 0.2s both;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.photo-frame {
+  width: 120px; height: 120px; border-radius: 50%;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #FFB7C5, #FFDAB9, #D4BBFF);
+  padding: 4px;
+  box-shadow: 0 8px 32px rgba(224,92,138,0.25);
+  animation: photoPulse 3s ease-in-out infinite;
+  cursor: pointer;
+}
+@keyframes photoPulse {
+  0%, 100% { box-shadow: 0 8px 32px rgba(224,92,138,0.25); }
+  50%       { box-shadow: 0 12px 48px rgba(224,92,138,0.45); }
+}
+
+.photo-inner {
+  width: 100%; height: 100%; border-radius: 50%;
+  background: #FFF0F5;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 46px; overflow: hidden;
+}
+.photo-inner img {
+  width: 100%; height: 100%;
+  object-fit: cover; border-radius: 50%;
+}
+
+.photo-hint { font-size: 11px; color: #B89090; margin-top: 8px; font-style: italic; }
+
+.upload-btn {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: white; border: 1.5px dashed #E8C0CE;
+  color: #E05C8A; font-size: 12px; font-weight: 500;
+  padding: 6px 16px; border-radius: 20px;
+  cursor: pointer; margin-top: 8px; transition: all 0.2s;
+}
+.upload-btn:hover { background: #FFF0F5; border-color: #E05C8A; }
+
+.capsules-label {
+  font-size: 11px; font-weight: 500; letter-spacing: 2px;
+  text-transform: uppercase; color: #B89090;
+  text-align: center; margin-bottom: 16px;
+  animation: fadeUp 1s ease 0.3s both;
+}
+
+.capsules-grid {
+  display: flex; flex-direction: column; gap: 14px;
+  animation: fadeUp 1s ease 0.4s both;
+}
+
+.capsule {
+  background: white; border-radius: 20px;
+  padding: 18px 20px;
+  display: flex; align-items: center; gap: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  border: 1.5px solid transparent;
+  transition: all 0.3s ease;
+  position: relative; overflow: hidden;
+}
+.capsule::before {
+  content: ''; position: absolute;
+  left: 0; top: 0; bottom: 0; width: 4px;
+  border-radius: 20px 0 0 20px;
+}
+.capsule:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+}
+
+.capsule.pink::before     { background: #E05C8A; }
+.capsule.orange::before   { background: #FF8C42; }
+.capsule.purple::before   { background: #9B6EBF; }
+.capsule.teal::before     { background: #3CBFAE; }
+.capsule.gold::before     { background: #F0A500; }
+.capsule.blue::before     { background: #4A90D9; }
+.capsule.green::before    { background: #4CAF7D; }
+.capsule.red::before      { background: #E05C5C; }
+.capsule.lavender::before { background: #B07FDE; }
+.capsule.rose::before     { background: #D45F8A; }
+
+.capsule-emoji {
+  font-size: 28px; min-width: 36px; text-align: center;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+.capsule-info { flex: 1; }
+.capsule-label {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px; color: #3D2C2C;
+  font-weight: 700; line-height: 1.3;
+}
+.capsule-hint { font-size: 11px; color: #B89090; margin-top: 3px; font-weight: 300; }
+.capsule-lock { font-size: 18px; opacity: 0.4; transition: all 0.3s; }
+.capsule:hover .capsule-lock { opacity: 1; transform: rotate(-10deg); }
+
+.sparkle {
+  position: fixed; width: 6px; height: 6px;
+  border-radius: 50%; opacity: 0;
+  animation: sparkleAnim 1.2s ease forwards;
+  pointer-events: none; z-index: 999;
+}
+@keyframes sparkleAnim {
+  0%   { opacity: 0; transform: scale(0) translate(0,0); }
+  50%  { opacity: 1; }
+  100% { opacity: 0; transform: scale(1) translate(var(--tx), var(--ty)); }
+}
+
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 100;
+  background: rgba(60,30,30,0.5);
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+.modal-overlay.open { opacity: 1; pointer-events: all; }
+
+.modal {
+  background: white; border-radius: 28px;
+  width: 100%; max-width: 420px;
+  padding: 32px 28px;
+  transform: scale(0.9) translateY(20px);
+  transition: transform 0.35s ease;
+  position: relative; max-height: 85vh; overflow-y: auto;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.2);
+}
+.modal-overlay.open .modal { transform: scale(1) translateY(0); }
+
+.modal-top { text-align: center; margin-bottom: 20px; }
+.modal-emoji { font-size: 48px; display: block; margin-bottom: 10px; }
+.modal-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; color: #3D2C2C; font-weight: 700;
+}
+.modal-subtitle { font-size: 12px; color: #B89090; margin-top: 4px; letter-spacing: 0.5px; }
+
+.modal-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #F0D0DA, transparent);
+  margin: 18px 0;
+}
+
+.modal-message {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px; line-height: 1.8;
+  color: #4A3030; font-style: italic; white-space: pre-line;
+}
+
+.modal-signature {
+  margin-top: 20px; text-align: right;
+  font-size: 13px; color: #E05C8A;
+  font-family: 'Playfair Display', serif; font-weight: 700;
+}
+
+.modal-close {
+  position: absolute; top: 16px; right: 20px;
+  background: #FFF0F5; border: none; border-radius: 50%;
+  width: 34px; height: 34px; font-size: 16px;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  color: #E05C8A; transition: all 0.2s;
+}
+.modal-close:hover { background: #FFE0EC; transform: rotate(90deg); }
+
+.footer {
+  text-align: center; margin-top: 36px;
+  font-size: 11px; color: #C4A0A0;
+  font-style: italic; letter-spacing: 0.5px;
+  animation: fadeUp 1s ease 0.8s both;
+}
+
+.confetti-piece {
+  position: fixed; top: -10px; width: 8px; height: 8px;
+  border-radius: 2px; opacity: 0;
+  animation: confettiFall linear forwards;
+  z-index: 200; pointer-events: none;
+}
+@keyframes confettiFall {
+  0%   { opacity: 1; transform: translateY(0) rotate(0deg); }
+  100% { opacity: 0; transform: translateY(100vh) rotate(720deg); }
+}
+
+#file-input { display: none; }

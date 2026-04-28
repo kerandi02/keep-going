@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Little Something for Fransiscah 💌</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="bg-blobs">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+    <div class="blob blob4"></div>
+  </div>
+
+  <div class="app">
+
+    <div class="header">
+      <span class="heart-icon">💌</span>
+      <h1>A Little Something<br>for <span>Fransiscah</span></h1>
+      <p>Open each envelope when the moment finds you</p>
+      <div class="from-tag">✨ From Brian, with love</div>
+    </div>
+
+    <div class="photo-section">
+      <div class="photo-frame" onclick="document.getElementById('file-input').click()">
+        <div class="photo-inner" id="photo-display">🌸</div>
+      </div>
+      <p class="photo-hint">tap the circle to add her photo</p>
+      <label class="upload-btn" for="file-input">+ Add photo of Fransiscah</label>
+      <input type="file" id="file-input" accept="image/*" onchange="handlePhoto(this)">
+    </div>
+
+    <div class="capsules-label">— your letters are waiting —</div>
+    <div class="capsules-grid" id="capsules"></div>
+
+    <div class="footer">made with love by Brian · just for Fransiscah 🌸</div>
+
+  </div>
+
+  <div class="modal-overlay" id="modal" onclick="closeModal(event)">
+    <div class="modal" id="modal-box">
+      <button class="modal-close" onclick="closeModalBtn()">✕</button>
+      <div class="modal-top">
+        <span class="modal-emoji" id="m-emoji"></span>
+        <div class="modal-title" id="m-title"></div>
+        <div class="modal-subtitle" id="m-sub"></div>
+      </div>
+      <div class="modal-divider"></div>
+      <div class="modal-message" id="m-msg"></div>
+      <div class="modal-signature">— Brian 💛</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
